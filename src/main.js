@@ -58,8 +58,14 @@ console.log(str.length)
 let step = ()=>{
     if(n >= str.length)
         return
-    str2 += str[n]==='\n'?'<br>':str[n]
-    console.log(str)
+    if(str[n] === '\n'){
+        str2 += '<br>'
+    }else if(str[n] === ' '){
+        str2 += '&nbsp;'
+    }else{
+        str2 += str[n];
+    }
+    // console.log(str)
     html.innerHTML = str2
     style.innerHTML = str.substring(0,n+1)
     window.scrollTo(0,100000)
@@ -67,7 +73,7 @@ let step = ()=>{
     n = n + 1
     setTimeout(()=>{
         step()
-    },0)
+    },10)
 }
 
 step()
