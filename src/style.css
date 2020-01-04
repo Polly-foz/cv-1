@@ -1,13 +1,47 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+
+@media all and (min-width: 769px) {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    
+    *::before, *::after{
+        box-sizing: border-box;
+    }
+    
+    
+    #effect{
+        position: fixed;
+        top:50px;
+        right:50px;
+    }
+ 
 }
 
-#code{
-    border:1px solid red;
-}
+@media all and (max-width: 768px) {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    
+    *::before, *::after{
+        box-sizing: border-box;
+    }
 
-#effect{
-    border:1px solid green;
+    #html{
+        height:50vh;
+        position:fixed;
+        top:0;
+        overflow: auto;
+    }
+    
+    #effect{
+        height: 50vh;
+        position: fixed;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%,-50%) ;
+    }
 }
